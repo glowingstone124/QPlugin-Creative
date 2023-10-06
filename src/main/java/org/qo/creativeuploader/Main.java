@@ -18,7 +18,7 @@ public final class Main extends JavaPlugin {
         Timer timer = new Timer();
         timer.schedule(new StatusUploader(), 1000, 3000);
         try {
-            timer.schedule(ChatSync.broadcast(), 500, 1000);
+            timer.schedule(new ChatSync(), 100, 1000);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
